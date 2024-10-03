@@ -1,11 +1,9 @@
 <script setup lang="ts">
 
+
 </script>
 
+
 <template>
-<div>log</div>
+  啦啦啦
 </template>
-
-<style scoped>
-
-</style>

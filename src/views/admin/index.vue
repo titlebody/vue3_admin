@@ -31,7 +31,6 @@ function goHome() {
     <div class="c_head">
       <div class="crumbs">
         <c_-breadcrumb></c_-breadcrumb>
-
       </div>
       <div class="actions">
         <span title="去首页" @click="goHome"><icon-home /></span>

@@ -19,7 +19,7 @@ const options:OptionType=[
   {title:"个人信息",name:"userInfo"},
   {title:"用户列表",name:"userList"},
   {title:"系统信息",name:"settings"},
-  {title:"注销推出",name:"logout"}
+  {title:"注销推出",name:"login"}
 ]
 </script>
 

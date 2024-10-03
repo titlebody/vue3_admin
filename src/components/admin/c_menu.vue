@@ -6,6 +6,7 @@ import C_component from "@/components/common/c_component.vue";
 import {collapsed} from "@/components/admin/f_menu";
 import router from "@/router";
 import {useRoute} from "vue-router";
+import MaterialSymbolsArticleOutline from '~icons/material-symbols/article-outline';
 
 interface menuType {
   title: string
@@ -42,6 +43,20 @@ const menuList :menuType[]=[
       }
     ]
   },
+  {
+    title:"文章管理",
+    name:'userArticle',
+    icon:MaterialSymbolsArticleOutline,
+    children:[
+      {
+        title:"文章新增",name:"ArticleAdd",icon:"iconfont icon-yonghuguanli_huaban"
+      },
+      {
+        title:"文章列表",name:"ArticleList",icon:"iconfont icon-yonghuguanli_huaban"
+      }
+    ]
+  },
+
 /*  {
     title:"组件管理",
     name:"settingsManage",

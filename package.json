@@ -11,25 +11,39 @@
     "type-check": "vue-tsc --build --force"
   },
   "dependencies": {
+    "@element-plus/icons-vue": "^2.3.1",
     "axios": "^1.7.2",
+    "element-plus": "^2.8.0",
+    "jquery": "^3.7.1",
+    "md-editor-v3": "^4.18.1",
     "nprogress": "^0.2.0",
     "pinia": "^2.1.7",
     "pinia-plugin-persistedstate": "^3.2.1",
     "swiper": "^11.1.4",
     "vue": "^3.4.21",
-    "vue-router": "^4.3.0"
+    "vue-router": "^4.3.0",
+    "webpack": "^5.93.0"
   },
   "devDependencies": {
     "@arco-design/web-vue": "^2.55.2",
+    "@iconify-json/material-symbols": "^1.1.87",
+    "@iconify-json/mdi": "^1.1.68",
     "@tsconfig/node20": "^20.1.4",
     "@types/node": "^20.12.5",
     "@types/nprogress": "^0.2.3",
     "@vitejs/plugin-vue": "^5.0.4",
     "@vue/tsconfig": "^0.5.1",
+    "autoprefixer": "^10.4.20",
     "less": "^4.2.0",
     "less-loader": "^12.2.0",
     "npm-run-all2": "^6.1.2",
+    "postcss": "^8.4.41",
+    "sass": "^1.77.8",
+    "tailwindcss": "^3.4.10",
     "typescript": "~5.4.0",
+    "unplugin-auto-import": "^0.18.2",
+    "unplugin-icons": "^0.19.2",
+    "unplugin-vue-components": "^0.27.4",
     "vite": "^5.2.8",
     "vue-tsc": "^2.0.11"
   }

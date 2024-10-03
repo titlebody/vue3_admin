@@ -3,13 +3,13 @@ import {collapsed}from '@/components/admin/f_menu'
 </script>
 
 <template>
-<div class="c_logo" :class="{collapsed: collapsed}">
-  <img src="https://www.logosc.cn/oss/icons/2023/03/20/tOY9KpHFaeglM4b.png" class="logo" alt="logo">
-  <div class="slogan">
-    <div>晨曦知道</div>
-    <div>chenxizhidao</div>
+  <div class="c_logo" :class="{collapsed: collapsed}">
+    <img src="https://www.logosc.cn/oss/icons/2023/03/20/tOY9KpHFaeglM4b.png" class="logo" alt="logo">
+    <div class="slogan">
+      <div>晨曦知道</div>
+      <div>chenxizhidao</div>
+    </div>
   </div>
-</div>
 </template>
 
 <style lang="less">

@@ -12,15 +12,18 @@ interface TabType{
   title:string
   icon?:string
 }
+const swiperRef = ref(null);
 
 let tabs=ref(<TabType[]>[
   {name:"home",title:"首页"},
   {name:"userInfo",title:"个人信息"},
   {name:"userList",title:"用户列表"},
   {name:"settings",title:"系统信息"},
+  {name:"ArticleList",title:"文章管理"},
+  {name:"ArticleAdd",title:"文章新增"},
 ])
 
-function removeItem(item:TabType){
+function  removeItem(item:TabType){
   const index=tabs.value.findIndex(value=>item.name==value.name)
 
   if(index!==-1){
@@ -78,48 +81,8 @@ watch(()=>route.name,()=>{
 },{immediate:true})
 const slidesCount=ref(50)
 onMounted(()=>{
-  //显示的总宽度
-  const swiperDom=document.querySelector(".c_tabs_swiper") as HTMLDivElement
-  const swiperWidth=swiperDom.clientWidth
 
-  //实际的总宽度
 
-  const weappperDom=document.querySelector(".c_tabs_swiper .swiper-wrapper") as HTMLDivElement
-  const wrapperWidth=weappperDom.scrollWidth
-
-  if (swiperWidth>wrapperWidth){
-    return
-  }
-  const slideList=document.querySelectorAll('.c_tabs_swiper .swiper-slide')
-  let allWith=0
-  /*slideList.forEach((item,index)=>{
-    allWith+=item.clientWidth
-    if (allWith>=swiperWidth){
-      return
-    }
-  })*/
-  let index=0
-  for (const slideListElement of slideList){
-    allWith+=slideListElement.clientWidth+20
-    index++
-    if (allWith>=swiperWidth){
-      break
-    }
-  }
-
-  slidesCount.value=index
-  // 选中高亮的元素
-  //偏移量
-  const activeSlide=document.querySelector(".c_tabs_swiper .item.active") as HTMLElement
-  if (activeSlide.parentNode.offsetLeft>swiperWidth){
-    console.log("进来了")
-    const offsetLeft =swiperWidth- activeSlide.parentNode.offsetLeft-100
-
-    setTimeout(()=>{
-      weappperDom.style.transform=`translate3d(${offsetLeft}px,0px,0px)`
-      console.log(offsetLeft)
-    },1000)
-  }
 
 
 

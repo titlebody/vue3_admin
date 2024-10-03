@@ -6,14 +6,17 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
+      name:"login",
+      path:"/login",
+      meta:{
+        title:"登录"
+      },
+      component:()=>import("@/views/login/index.vue"),
+    },
+    {
       name:"web",
       path:"/",
       redirect : "/admin",
-    },
-    {
-      name:"login",
-      path:"/login",
-      component:()=>import("@/views/login/index.vue"),
     },
     {
       name:"admin",
@@ -46,6 +49,21 @@ const router = createRouter({
             {name:"userList",path:"user_list",component:()=>import("@/views/admin/user_manage/index.vue"),meta:{
               title:"用户列表",
               }}
+          ]
+        },
+        {
+          name:"userArticle",
+          path:"user_article",
+          meta:{
+            title:"文章管理",
+          },
+          children:[
+            {name:"ArticleList",path: "article_list",component:()=>import("@/views/admin/article/articleList.vue"),meta:{
+              title:"文章列表"
+              }},
+            {name:"ArticleAdd",path: "article_add",component:()=>import("@/views/admin/article/articleAdd.vue"),meta:{
+              title:"新增文章"
+              }},
           ]
         },
         {
